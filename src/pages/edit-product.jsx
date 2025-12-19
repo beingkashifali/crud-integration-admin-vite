@@ -10,7 +10,9 @@ function EditProduct() {
   const [productData, setProductData] = useState({});
 
   async function fetchProduct() {
-    const product = await axios.get(`http://localhost:8000/${param.id}`);
+    const product = await axios.get(
+      `https://admin-products-weld.vercel.app/${param.id}`
+    );
     console.log(product.data);
     setProductData(product.data);
   }

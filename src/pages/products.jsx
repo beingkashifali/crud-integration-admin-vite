@@ -12,7 +12,7 @@ function Products() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/");
+        const res = await axios.get("https://admin-products-weld.vercel.app/");
         setProducts(res.data);
       } catch (error) {
         console.error("Axios GET error:", error.message);
@@ -23,7 +23,7 @@ function Products() {
   }, []);
 
   async function deleteProduct(id) {
-    await axios.delete(`http://localhost:8000/${id}`);
+    await axios.delete(`https://admin-products-weld.vercel.app/${id}`);
     const singleProduct = products.filter((product) => product._id !== id);
     setProducts(singleProduct);
     toast.success("Product deleted successfully.");

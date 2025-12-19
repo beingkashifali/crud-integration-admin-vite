@@ -22,7 +22,10 @@ function CreateProduct() {
 
   async function submitHandler(e) {
     e.preventDefault();
-    const res = await axios.post("http://localhost:8000/", product);
+    const res = await axios.post(
+      "https://admin-products-weld.vercel.app/",
+      product
+    );
     toast.success("Product created successfully.");
     console.log(res);
     navigate("/");
