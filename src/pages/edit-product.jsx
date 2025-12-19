@@ -11,7 +11,7 @@ function EditProduct() {
 
   async function fetchProduct() {
     const product = await axios.get(
-      `https://admin-products-weld.vercel.app/${param.id}`
+      `https://admin-products-1jfvxnaml-kashif-alis-projects-548d7eb5.vercel.app/${param.id}`
     );
     console.log(product.data);
     setProductData(product.data);
@@ -26,7 +26,7 @@ function EditProduct() {
   async function submitHandler(e) {
     e.preventDefault();
     const res = await axios.patch(
-      `https://admin-products-weld.vercel.app/${param.id}`,
+      `https://admin-products-1jfvxnaml-kashif-alis-projects-548d7eb5.vercel.app/${param.id}`,
       productData
     );
     toast.success("Product updated successfully.");
