@@ -13,7 +13,7 @@ function Products() {
     const fetchProducts = async () => {
       try {
         const res = await axios.get(
-          "https://admin-products-1jfvxnaml-kashif-alis-projects-548d7eb5.vercel.app/"
+          "https://crud-integration-admin-vite-xi.vercel.app/"
         );
         setProducts(res.data);
       } catch (error) {
@@ -26,7 +26,7 @@ function Products() {
 
   async function deleteProduct(id) {
     await axios.delete(
-      `https://admin-products-1jfvxnaml-kashif-alis-projects-548d7eb5.vercel.app/${id}`
+      `https://crud-integration-admin-vite-xi.vercel.app/${id}`
     );
     const singleProduct = products.filter((product) => product._id !== id);
     setProducts(singleProduct);

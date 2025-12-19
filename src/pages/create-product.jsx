@@ -23,7 +23,7 @@ function CreateProduct() {
   async function submitHandler(e) {
     e.preventDefault();
     const res = await axios.post(
-      "https://admin-products-1jfvxnaml-kashif-alis-projects-548d7eb5.vercel.app/",
+      "https://crud-integration-admin-vite-xi.vercel.app/",
       product
     );
     toast.success("Product created successfully.");
