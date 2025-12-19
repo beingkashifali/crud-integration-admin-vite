@@ -26,7 +26,7 @@ function EditProduct() {
   async function submitHandler(e) {
     e.preventDefault();
     const res = await axios.patch(
-      `http://localhost:8000/${param.id}`,
+      `https://admin-products-weld.vercel.app/${param.id}`,
       productData
     );
     toast.success("Product updated successfully.");
