@@ -23,7 +23,7 @@ function CreateProduct() {
   async function submitHandler(e) {
     e.preventDefault();
     const res = await axios.post(
-      "https://crud-integration-admin-vite-xi.vercel.app/",
+      "https://crud-integration-admin-node.onrender.com/",
       product
     );
     toast.success("Product created successfully.");

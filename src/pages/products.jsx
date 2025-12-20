@@ -13,9 +13,10 @@ function Products() {
     const fetchProducts = async () => {
       try {
         const res = await axios.get(
-          "https://crud-integration-admin-vite-xi.vercel.app/"
+          "https://crud-integration-admin-node.onrender.com/"
         );
         setProducts(res.data);
+        console.log(res.data.products);
       } catch (error) {
         console.error("Axios GET error:", error.message);
       }
@@ -26,7 +27,7 @@ function Products() {
 
   async function deleteProduct(id) {
     await axios.delete(
-      `https://crud-integration-admin-vite-xi.vercel.app/${id}`
+      `https://crud-integration-admin-node.onrender.com/${id}`
     );
     const singleProduct = products.filter((product) => product._id !== id);
     setProducts(singleProduct);

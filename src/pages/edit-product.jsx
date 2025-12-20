@@ -11,7 +11,7 @@ function EditProduct() {
 
   async function fetchProduct() {
     const product = await axios.get(
-      `https://crud-integration-admin-vite-xi.vercel.app/${param.id}`
+      `https://crud-integration-admin-node.onrender.com/${param.id}`
     );
     console.log(product.data);
     setProductData(product.data);
@@ -26,7 +26,7 @@ function EditProduct() {
   async function submitHandler(e) {
     e.preventDefault();
     const res = await axios.patch(
-      `https://crud-integration-admin-vite-xi.vercel.app/${param.id}`,
+      `https://crud-integration-admin-node.onrender.com/${param.id}`,
       productData
     );
     toast.success("Product updated successfully.");
