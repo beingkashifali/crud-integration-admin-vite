@@ -92,6 +92,16 @@ function EditProduct() {
             onChange={changeHandler}
           />
         </Form.Group>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput5">
+          <Form.Label>Product Image</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Product Image"
+            name="productImage"
+            value={productData.productImage}
+            onChange={changeHandler}
+          />
+        </Form.Group>
         <Button type="submit" variant="success">
           Edit
         </Button>
