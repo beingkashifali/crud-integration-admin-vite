@@ -47,6 +47,7 @@ function Products() {
         {products.map((product) => (
           <Card key={product._id} style={{ width: "300px" }}>
             <Card.Img
+              style={{ height: "400px" }}
               variant="top"
               src={product.productImage}
               // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQsmOvRlNQdkUocXUiM46PApbCHHSoV4Cc2A&s"
