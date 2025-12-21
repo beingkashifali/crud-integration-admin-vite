@@ -9,14 +9,6 @@ function EditProduct() {
   const navigate = useNavigate();
   const [productData, setProductData] = useState({});
 
-  async function fetchProduct() {
-    const product = await axios.get(
-      `https://crud-integration-admin-node.onrender.com/${param.id}`
-    );
-    console.log(product.data);
-    setProductData(product.data);
-  }
-
   function changeHandler(e) {
     const name = e.target.name;
     const value = e.target.value;
@@ -36,8 +28,15 @@ function EditProduct() {
 
   //   fetchProduct();
   useEffect(() => {
+    async function fetchProduct() {
+      const product = await axios.get(
+        `https://crud-integration-admin-node.onrender.com/${param.id}`
+      );
+      console.log(product.data);
+      setProductData(product.data);
+    }
     fetchProduct();
-  }, []);
+  }, [param.id]);
   return (
     <div className="w-50 mx-auto my-4">
       <h2>Edit Product</h2>
