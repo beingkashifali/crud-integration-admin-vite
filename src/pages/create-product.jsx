@@ -86,7 +86,7 @@ function CreateProduct() {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput5">
-          <Form.Label>Review</Form.Label>
+          <Form.Label>Product Image</Form.Label>
           <Form.Control
             type="text"
             placeholder="Product Image"
