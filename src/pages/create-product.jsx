@@ -11,6 +11,7 @@ function CreateProduct() {
     price: "",
     rating: "",
     review: "",
+    productImage: "",
   });
   const navigate = useNavigate();
 
@@ -81,6 +82,16 @@ function CreateProduct() {
             placeholder="Client's Review"
             name="review"
             value={product.review}
+            onChange={changeHandler}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput5">
+          <Form.Label>Review</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Product Image"
+            name="productImage"
+            value={product.productImage}
             onChange={changeHandler}
           />
         </Form.Group>
