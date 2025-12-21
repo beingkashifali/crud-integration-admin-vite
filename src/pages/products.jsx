@@ -48,7 +48,8 @@ function Products() {
           <Card key={product._id} style={{ width: "300px" }}>
             <Card.Img
               variant="top"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQsmOvRlNQdkUocXUiM46PApbCHHSoV4Cc2A&s"
+              src={product.productImage}
+              // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQsmOvRlNQdkUocXUiM46PApbCHHSoV4Cc2A&s"
             />
             <Card.Body>
               <Card.Title>{product.title}</Card.Title>
